@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #00010D;
+}
+
+header > h2 {
+    padding: 10px;
+    text-align: center;
+    color: #F2F2F2;
+}
+
+main {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-areas: 
+    "one two three four"
+    "five six seven seven"
+    "five eight eight nine";
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 8px;
+    margin-top: 40px;
+    padding: 5px;
+    background-color: #AAB7BF;
+}
+
+main div {
+    height: 180px;
+    width: 180px;
+    background-color: green;
+}
+
+main > div.one {
+    grid-area: one;
+    border-radius: 8px;
+    background-image: url(../images/img-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.two {
+    grid-area: two;
+    border-radius: 8px;
+    background-image: url(../images/img-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.three {
+    grid-area: three;
+    border-radius: 8px;
+    background-image: url(../images/img-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.four {
+    grid-area: four;
+    border-radius: 8px;
+    background-image: url(../images/img-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.five {
+    grid-area: five;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    background-image: url(../images/img-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.six {
+    grid-area: six;
+    border-radius: 8px;
+    background-image: url(../images/img-6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.seven {
+    grid-area: seven;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    background-image: url(../images/img-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.eight {
+    grid-area: eight;
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    background-image: url(../images/img-8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.nine {
+    grid-area: nine;
+    border-radius: 8px;
+    background-image: url(../images/img-9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
