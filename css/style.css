@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +20,7 @@ main {
     display: grid;
     align-content: center;
     justify-content: center;
-    max-width: 800px;
+    max-width: 650px;
     margin: 0 auto;
     grid-template-areas: 
     "one two three four"
@@ -32,99 +30,113 @@ main {
     grid-template-rows: auto auto auto auto;
     grid-gap: 8px;
     margin-top: 40px;
-    padding: 5px;
-    background-color: #AAB7BF;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: #737373;
 }
 
 main div {
-    height: 180px;
-    width: 180px;
-    background-color: green;
+    height: 150px;
+    width: 150px;
+    border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main > div.seven, main > div.eight {
+    width: auto;
+    height: auto;
+}
+
+main div:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: all .4s;
 }
 
 main > div.one {
     grid-area: one;
-    border-radius: 8px;
     background-image: url(../images/img-1.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.two {
     grid-area: two;
-    border-radius: 8px;
     background-image: url(../images/img-2.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.three {
     grid-area: three;
-    border-radius: 8px;
     background-image: url(../images/img-3.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.four {
     grid-area: four;
-    border-radius: 8px;
     background-image: url(../images/img-4.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.five {
     grid-area: five;
-    border-radius: 8px;
-    width: auto;
     height: auto;
     background-image: url(../images/img-5.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.six {
     grid-area: six;
-    border-radius: 8px;
     background-image: url(../images/img-6.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.seven {
     grid-area: seven;
-    border-radius: 8px;
-    width: auto;
-    height: auto;
     background-image: url(../images/img-7.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.eight {
     grid-area: eight;
-    border-radius: 8px;
-    width: auto;
-    height: auto;
     background-image: url(../images/img-8.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 main > div.nine {
     grid-area: nine;
-    border-radius: 8px;
     background-image: url(../images/img-9.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+}
+
+@media (max-width: 700px) {
+    main {
+        max-width: 300px;
+        grid-template-areas: 
+        "one one"
+        "two three"
+        "four six"
+        "five five"
+        "eight seven"
+        "nine seven";
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-gap: 6px;
+        margin-top: 20px;
+    }
+    
+    main div {
+        height: 130px;
+        width: 130px;
+    }
+
+    main > div.one {
+        width: auto;
+    }
+
+    main > div.five {
+        width: auto;
+        height: 130px;
+    }
+
+    main > div.seven {
+        height: auto;
+    }
+
+    main > div.eight {
+        width: auto;
+        height: 130px;
+    }
 }
